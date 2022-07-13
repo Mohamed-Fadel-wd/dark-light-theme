@@ -26,6 +26,10 @@ html {
 
 body {
   font-family: "Comfortaa", cursive;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   color: var(--on-background);
   background-color: var(--background);
@@ -71,6 +75,24 @@ a {
   border-bottom: 3px solid transparent;
   font-weight: bold;
 }
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    left: 25px;
+    top: 30px;
+  }
+  h1 {
+    font-size: 40px;
+    margin-bottom: 0;
+    font-family: "Kaushan Script", cursive;
+  }
+}
 
 a:hover,
 a:focus {
@@ -86,13 +108,16 @@ a:focus {
 /* About Section */
 .about-container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-container {
   border: 1px solid var(--secondary-color);
   border-radius: 10px;
   padding: 10px 20px;
-  margin-right: 25px;
+  margin: 25px 10px;
   width: auto;
   background: var(--background);
   box-shadow: var(--box-shadow);
@@ -120,6 +145,13 @@ button {
   outline: none;
 }
 
+.buttons,
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 button:disabled {
   opacity: 0.4;
   cursor: default;
